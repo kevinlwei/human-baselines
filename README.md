@@ -2,7 +2,7 @@
 
 **Authors:** Kevin L. Wei (RAND/Harvard), Patricia Paskov (RAND), Sunishchal Dev (RAND, Algoverse), Michael J. Byun (RAND), Anka Reuel (Stanford/Harvard), Xavier Roberts-Gaal (Harvard), Rachel Calcott (Harvard), Evie Coxon (Max Planck School of Cognition), Chinmay Deshpande (CDT) | **Contact:** hi@kevinlwei.com
 
-[Link to full paper, including checklist, on OpenReview](https://openreview.net/forum?id=VbG9sIsn4F)
+**[Link to full paper (including checklist & framework) on OpenReview](https://openreview.net/forum?id=VbG9sIsn4F)**
 
 Code and data forthcoming.
 
