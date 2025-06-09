@@ -76,7 +76,13 @@ Maximal rigor may not be possible in all human baselines due to resource limitat
 | **Baseline Documentation**                                                                     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | Report key details about baselining methodology and baseliners                                 | <ul><li>Report information about baseliners, baselining procedures, and baseline paradata. These details are important for interpreting and assessing baseline results.</li><li>Consider using the reporting checklist we provide in Appendix \ref{sec\:Appendix\_Checklist}.</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | Adopt best practices for open science and reproducibility/replicability                        | <ul><li>Where possible, release (anonymized) human baseline data, experimental materials such as forms or custom UIs, and analysis code.</li><li>Releasing such data helps validate research and may promote re-use of your human baseline in future work.</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+---
 
+## Data Availability
+
+Raw data from our literature review of human baselines is available in `/data/lit_review_data.xlsx`.
+
+Summary statistics are available [here](https://docs.google.com/spreadsheets/d/1dVXwqi4BjGDC5nf-G1tbJ3lTsrdQbqqnHXHafK1svT8/edit?usp=sharing) (provided as a Google Sheet because Excel broke the formulas). 
 
 ---
 
@@ -87,11 +93,14 @@ Maximal rigor may not be possible in all human baselines due to resource limitat
 |-- paper.pdf
 |-- README.md
 |-- repo_tree.txt
+|-- data
+    |-- lit_review_data.xlsx
+    |-- README.md
 |-- figures
 |   |-- baseline_language_frequencies.png
 |   |-- baseline_year_frequencies.png
 |   |-- Summary_Figure.png
-|   `-- venue_frequencies.png
+|   |-- venue_frequencies.png
 |-- fonts
 |   |
 |-- reporting_checklist
