@@ -97,12 +97,12 @@ Summary statistics are available [here](https://docs.google.com/spreadsheets/d/1
     |-- lit_review_data.xlsx
     |-- README.md
 |-- figures
-|   |-- baseline_language_frequencies.png
-|   |-- baseline_year_frequencies.png
-|   |-- Summary_Figure.png
-|   |-- venue_frequencies.png
+    |-- baseline_language_frequencies.png
+    |-- baseline_year_frequencies.png
+    |-- Summary_Figure.png
+    |-- venue_frequencies.png
 |-- fonts
-|   |
+    |
 |-- reporting_checklist
     |-- reporting_checklist.docx
     |-- reporting_checklist.pdf
