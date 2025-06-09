@@ -1,0 +1,310 @@
+\documentclass{article}
+
+% Recommended, but optional, packages for figures and better typesetting:
+\usepackage[accepted]{icml2025}
+\usepackage{enumitem}
+\usepackage{soul}
+
+\begin{document}
+\section*{Appendix: Human Baselines Checklist}
+\label{sec:Appendix_Checklist}
+
+\setcounter{subsection}{-1}
+\subsection{Paper Information}
+
+\renewcommand{\labelenumi}{0.\arabic{enumi}}
+\renewcommand{\labelenumii}{0.\arabic{enumi}.\arabic{enumii}}
+\renewcommand{\labelenumiii}{0.\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}
+
+\begin{enumerate}[leftmargin=30pt, topsep=0pt, itemsep=0pt]
+    \item \textbf{Paper Title}
+    
+    \item \textbf{Paper Link}
+    
+    \item \textbf{Publication Year}
+    
+    \item \textbf{Publication Venue}
+    
+    \item \textbf{Type of Eval} 
+    \newline \textit{Select all that apply}
+    \begin{itemize}
+        \item Knowledge
+        \item Capabilities
+        \item Propensity
+        \item Agent
+    \end{itemize}
+    
+    \item \textbf{Mode of Eval}
+    \newline \textit{Select all that apply}
+    \begin{itemize}
+        \item Text
+        \item Visual (photo/video)
+        \item Audio
+        \item Other
+    \end{itemize}
+    
+    \item \textbf{Language of Eval} 
+    \newline \textit{Select all that apply from list}
+    
+    \item \textbf{Evaluation Dataset Size}: What is the total number of items in the evaluation dataset? 
+    
+    \item \textbf{AI Test Set Size}: What is the number of items that the AI evaluation is run on? \ul{(Default same as Q0.8)}
+    
+    \item \textbf{AI Samples per Item}: What is the number of AI responses (``samples'' or ``runs'') that is collected for each item? \ul{(Default 1)} 
+\end{enumerate}
+
+\subsection{Baseline Design \& Implementation}
+
+\renewcommand{\labelenumi}{1.\arabic{enumi}}
+\renewcommand{\labelenumii}{1.\arabic{enumi}.\arabic{enumii}}
+\renewcommand{\labelenumiii}{1.\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}
+
+\begin{enumerate}[leftmargin=30pt, topsep=0pt, itemsep=0pt]
+    \item \textbf{Number of Baseliners}: How many baseliners were there total?
+    
+    \item \textbf{Baseline Test Set Size}: What is the number of items that the human baseline is run on? (i.e., how many of the questions do the baseliners collectively answer?) \ul{(Default same as Q0.9)}
+    \begin{enumerate}
+        \item \textbf{Baseline Test Set Sampling Strategy}: If the baseline is only run on a sample of the total dataset: what is the sampling strategy behind how the items were selected? E.g., simple random sampling, stratified sampling, etc.
+    \end{enumerate}
+    
+    \item \textbf{Baseline Samples per Item}: What was the number of human baseliner responses that is collected for each item? \ul{(Default Q1.1 $*$ Q1.4 $/$ Q1.2, or 1 if Q1.1 or Q1.4 unreported)}
+    
+    \item \textbf{Items per Baseliner}: What is the number of items that each baseliner responded to?
+    
+    \item \textbf{Explicit Human/AI Adjustment}: Does the eval/baseline instructions and items account for both humans and AI models completing the evals items (questions/tasks)? E.g., do the authors of the eval explicitly state that the eval is designed so as not to advantage either humans or AI models? 
+    \newline \textit{Select one of: ``Yes'', ``Partial'', \ul{``No'' (Default)}, ``Unknown/Unreported'', or ``N/A''}
+    
+    \item \textbf{Iterative Design}: Was the experimental setup of the baseline iteratively designed with participatory methods? E.g., was there a pilot study, expert validation of the items, etc.? 
+    \newline \textit{Select one of: ``Yes'', ``Partial'', ``No'', ``Unknown/Unreported'', or ``N/A''}
+    
+    \item \textbf{Amount of Effort}: Does the baseline control for the amount of effort by human baseliners and AIs? E.g., in terms of cost, time, etc.
+    \newline \textit{Select one of: ``Yes'', ``Partial'', ``No'', ``Unknown/Unreported'', or ``N/A''}
+    
+    \item \textbf{Power Analysis}: Did the authors conduct power analysis in order to determine baseline size? 
+    \newline \textit{Select one of: ``Yes'', ``Partial'', \ul{``No'' (Default)}, ``Unknown/Unreported'', or ``N/A''}
+    
+    \begin{enumerate}
+        \item \textbf{Minimum Detectable Effect Size}: if yes, what is the minimum detectable effect size and power?
+    \end{enumerate}
+    
+    \item \textbf{Ethics Review}: Was the study approved or exempted by an IRB, or did it undergo other ethics review? 
+    \newline \textit{Select one of: ``Yes'', ``Partial'', ``No'', ``Unknown/Unreported'', or ``N/A''}
+    
+    \item \textbf{Pre-Registration}: Was the baseline/eval design pre-registered? I.e., a plan detailing the experimental setup that is publicly registered online before running the experiment (e.g., on OSF, COS, etc.) 
+    \newline \textit{Select one of: ``Yes'', ``Partial'', \ul{``No'' (Default)}, ``Unknown/Unreported'', or ``N/A''}
+\end{enumerate}
+
+\subsection{Baseliner Recruitment}
+
+\renewcommand{\labelenumi}{2.\arabic{enumi}}
+\renewcommand{\labelenumii}{2.\arabic{enumi}.\arabic{enumii}}
+\renewcommand{\labelenumiii}{2.\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}
+
+\begin{enumerate}[leftmargin=30pt, topsep=0pt, itemsep=0pt]
+    \item \textbf{Population of Interest Identification}: Does the reporting identify human populations for which these results may be valid, i.e., a human population of interest?
+    \newline \textit{Select one of: ``Yes'', ``Partial'', \ul{``No'' (Default)}, ``Unknown/Unreported'', or ``N/A''}
+    \begin{enumerate}
+        \item \textbf{Population of Interest Identification Criteria}: Which of the following factors were used to scope the target human population of interest?
+        \newline \textit{Select all that apply}
+        \begin{itemize}
+            \item Expertise
+            \item Education
+            \item Language
+            \item Gender/sex
+            \item Race
+            \item Socioeconomic status
+            \item Age
+            \item Disabilities/impairments
+            \item Political orientation
+            \item Digital literacy (Prior experience with computers)
+            \item AI literacy (Prior experience with AI tools)
+            \item Baseline experience: Prior experience with AI evals/doing human baselines 
+            \item Other (specify)
+        \end{itemize}
+    \end{enumerate}
+    
+    \item \textbf{Baseliner Sampling Strategy}: How were the human baseliners recruited? 
+    \newline \textit{Select one of the below}
+    \begin{itemize}
+        \item Crowdsource
+        \item Convenience sample
+        \item Simple random sample
+        \item Stratified random sample
+        \item Other (specify)
+        \item Unknown/unreported
+    \end{itemize}
+    
+    \item \textbf{Quality Control in Recruitment}: Were human baseliners pre-qualified or excluded during the recruitment process for any reason?
+    \newline \textit{Select one of: \ul{``Yes'' (Default)}, ``Partial'', ``No'', ``Unknown/Unreported'', or ``N/A''}
+    \begin{enumerate}
+        \item \textbf{Quality Control Criteria for Baseliners}: If yes: please describe the inclusion/exclusion criteria for human baseliners (e.g., pre-tests, expert judgements/filtering, quality scores or ratings on crowdwork platforms, number of tasks completed on crowdwork platforms). Data quality checks that occurred after baseliners were recruited should be reported in the implementation section (e.g., attention checks in a survey).
+        
+        \item \textbf{Recruitment Exclusion Rate}: If yes: how many baseliners were excluded from the final baseline based on these criteria?
+    \end{enumerate}
+        
+    \item \textbf{Author Baseliners}: Did the authors or members of the research team also serve as human baseliners?
+    \newline \textit{Select one of: ``Yes'', ``Partial'', \ul{``No'' (Default)}, ``Unknown/Unreported'', or ``N/A''}
+    
+    \item \textbf{Baseliner Train/Test Contamination}: Did the recruitment process exclude baseliners who had been exposed to the eval questions previously?
+    \newline \textit{Select one of: ``Yes'', ``Partial'', \ul{``No'' (Default)}, ``Unknown/Unreported'', or ``N/A''}
+    
+    \item \textbf{Baseliner Training}: Did the human baseliners receive training for the baseline? Training should be distinct from the reported data, e.g., a tutorial completed before answering baseline questions
+    \newline \textit{Select one of: ``Yes'', ``Partial'', \ul{``No'' (Default)}, ``Unknown/Unreported'', or ``N/A''}
+    \begin{enumerate}
+        \item \textbf{Baseliner Training Type}: If yes: describe the type of training received (e.g., tutorial, shown examples, etc.)
+        \item \textbf{Baseliner Training Compensation}: If yes: were the baseliners compensated for the training?
+        \newline \textit{Select one of: ``Yes'', ``Partial'', ``No'', ``Unknown/Unreported'', or ``N/A''}
+        
+        \begin{enumerate}
+            \item \textbf{Baseliner Training Compensation Amount}: If yes: list the compensation per baseliner (preferably \$ / hour, otherwise total \$ amount if stated)
+        \end{enumerate}
+    \end{enumerate}
+    
+    \item \textbf{Baseliner Testing Compensation}: Were the human baseliners compensated for completing the baseline?
+    \newline \textit{Select one of: ``Yes'', ``Partial'', ``No'' (Default), ``Unknown/Unreported'', or ``N/A''}
+    \begin{enumerate}
+        \item \textbf{Baseliner Testing Compensation Amount}: If yes: how much was compensation? (preferably \$ / hour, otherwise total \$ amount if stated)
+
+        \item \textbf{Baseliner Testing Performance Bonus}: If yes: was a performance bonus offered to baseliners?
+        \newline \textit{Select one of: \ul{``Yes'' (Default)}, ``Partial'', ``No'', ``Unknown/Unreported'', or ``N/A''}
+
+        \begin{enumerate}
+            \item \textbf{Baseliner Testing Performance Bonus Amount}: If yes: how much was the performance bonus, and how was it determined?
+        \end{enumerate}
+        
+        \item \textbf{Baseliner Testing Compensation Structure}: If yes: were compensation rates and structures constant across baseliners? E.g., respond no if baseliners were paid differently according to expertise.
+        \newline \textit{Select one of: ``Yes'', ``Partial'', ``No'', ``Unknown/Unreported'', or ``N/A''}
+        \begin{enumerate}
+            \item \textbf{Baseliner Testing Compensation Structure Details}: If not compensated equally: how were compensation amounts determined?
+        \end{enumerate}
+    \end{enumerate}
+\end{enumerate}
+
+\subsection{Baseline Execution}
+
+\renewcommand{\labelenumi}{3.\arabic{enumi}}
+\renewcommand{\labelenumii}{3.\arabic{enumi}.\arabic{enumii}}
+\renewcommand{\labelenumiii}{3.\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}
+
+\begin{enumerate}[leftmargin=30pt, topsep=0pt, itemsep=0pt]
+    \item \textbf{Instrument Length}: How many items did the human baseliners complete in a single sitting/session? I.e., what is the length of the baseliner ``context window'' in units of items?
+    \begin{enumerate}
+        \item \textbf{Item Randomization}: If not 1: was the order of the questions randomized?
+    \end{enumerate}
+    
+    \item \textbf{Quality Control in Execution}: Were quality checks implemented or data cleaned/excluded during the data collection process (i.e., after baseliners were recruited)? E.g., were there any exclusion criteria for baseliner responses due to data quality such as attention check questions, honeypot questions, filtering out responders who completed the eval too quickly, screen recording, etc.
+    \newline \textit{Select one of: ``Yes'', ``Partial'', \ul{``No'' (Default)}, ``Unknown/Unreported'', or ``N/A''}
+    \begin{enumerate}
+        \item \textbf{Quality Control in Execution Criteria}: If yes: what factors were used to determine data quality or to exclude low-quality data?
+        
+        \item \textbf{Execution Exclusion Rate}: If yes: how many samples were excluded from the final baseline based on these criteria?
+    \end{enumerate}
+    
+    \item \textbf{UI Equivalence}: Did the human baseliners and AIs have access to the same UI for each item?
+    \newline \textit{Select one of: ``Yes'', ``Partial'', \ul{``No'' (Default)}, ``Unknown/Unreported'', or ``N/A''}
+    \begin{enumerate}
+        \item \textbf{GUI vs. API}: Check this box if the humans had access to a graphical UI and the AIs only had API inputs
+        \newline \textit{Checkbox item} \ul{(Unchecked by default)}
+        
+        \item \textbf{UI Equivalence Adjustment}: If no: does the eval attempt to adjust for the differences?
+        \newline \textit{Select one of: ``Yes'', ``Partial'', \ul{``No'' (Default)}, ``Unknown/Unreported'', or ``N/A''}
+    \end{enumerate}
+    
+    \item \textbf{Instruction Equivalence}: Did the human baseliners and AIs have access to the same instructions/prompt/question for each item?
+    \newline \textit{Select one of: ``Yes'', ``Partial'', \ul{``No'' (Default)}, ``Unknown/Unreported'', or ``N/A''}
+    \begin{enumerate}
+        \item \textbf{Instruction Equivalence Adjustment}: If no: does the eval attempt to adjust for the differences?
+        \newline \textit{Select one of: ``Yes'', ``Partial'', \ul{``No'' (Default)}, ``Unknown/Unreported'', or ``N/A''}
+    \end{enumerate}
+    
+    \item \textbf{Tool Access Equivalence}: Did the human baseliners and AIs have access to the same (technical) tools for each item? Respond yes if neither group had access to external tools; respond yes if the human had internet access and the AI did not (but was trained on the internet)
+    \newline \textit{Select one of: \ul{``Yes'' (Default)}, ``Partial'', ``No'', ``Unknown/Unreported'', or ``N/A''}
+    \begin{enumerate}
+        \item \textbf{Tool Access Equivalence Enforcement}: If human baseliners' tool access was limited: was there an oversight mechanism for ensuring that the human baseliners only used the tools permitted? E.g., enforcement of AI tool use ban
+        \newline \textit{Select one of: ``Yes'', ``Partial'', \ul{``No'' (Default)}, ``Unknown/Unreported'', or ``N/A''}
+    \end{enumerate}
+    
+    \item \textbf{Explanations}: Did the eval/baseline collect explanations from the human baseliners, after the evaluation was conducted? I.e., explanations for why the human participants responded the way they did
+    \newline \textit{Select one of: ``Yes'', ``Partial'', \ul{``No'' (Default)}, ``Unknown/Unreported'', or ``N/A''}
+\end{enumerate}
+
+\subsection{Baseline Analysis}
+
+\renewcommand{\labelenumi}{4.\arabic{enumi}}
+\renewcommand{\labelenumii}{4.\arabic{enumi}.\arabic{enumii}}
+\renewcommand{\labelenumiii}{4.\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}
+
+\begin{enumerate}[leftmargin=30pt, topsep=0pt, itemsep=0pt]
+    \item \textbf{Statistical Significance}: Did the eval test for statistically significant differences between AI and human performance?
+    \newline \textit{Select one of: ``Yes'', ``Partial'', \ul{``No'' (Default)}, ``Unknown/Unreported'', or ``N/A''}
+    \begin{enumerate}
+        \item \textbf{Statistical Significance Test}: If yes: what statistical test was used?
+    \end{enumerate}
+    
+    \item \textbf{Uncertainty Estimate}: Did the paper present a measure of uncertainty for the AI and human baseline results? E.g., confidence intervals, variance, pooled/clustered standard errors, etc.?
+    \newline \textit{Select one of: ``Yes'', ``Partial'', \ul{``No'' (Default)}, ``Unknown/Unreported'', or ``N/A''}
+    \begin{enumerate}
+        \item \textbf{Estimate Type}: Is the reported baseline a point estimate, an interval estimate, or a distribution?
+        \newline \textit{Select all that apply}
+        \begin{itemize}
+            \item \ul{Point estimate (Default)}
+            \item Interval estimate
+            \item Distribution estimate
+        \end{itemize}
+    \end{enumerate}
+    
+    \item \textbf{Evaluation Metric Equivalence}: Was the same evaluation metric measured/compared for both humans and AIs? Respond ``no'' if, e.g., the human baseline is majority vote but the AI baseline is not
+    \newline \textit{Select one of: \ul{``Yes'' (Default)}, ``Partial'', ``No'', ``Unknown/Unreported'', or ``N/A''}
+    
+    \item \textbf{Evaluation Scoring Criteria Equivalence}: Was the same scoring rubric used for both AI and human results?
+    \newline \textit{Select one of: \ul{``Yes'' (Default)}, ``Partial'', ``No'', ``Unknown/Unreported'', or ``N/A''}
+    
+    \item \textbf{Evaluation Scoring Method Equivalence}: Was the same scoring method used for both AI and human results? E.g., human grading, LLM as a judge
+    \newline \textit{Select one of: \ul{``Yes'' (Default)}, ``Partial'', ``No'', ``Unknown/Unreported'', or ``N/A''}
+    
+    \item \textbf{Quality Control Robustness}: If quality controls were implemented: are analyses robust to different choices of exclusion criteria? E.g., do the authors state that the results don't change when including/excluding incomplete data?
+    \newline \textit{Select one of: ``Yes'', ``Partial'', ``No'', ``Unknown/Unreported'', or ``N/A''}
+\end{enumerate}
+
+\subsection{Baseline Documentation}
+
+\renewcommand{\labelenumi}{5.\arabic{enumi}}
+\renewcommand{\labelenumii}{5.\arabic{enumi}.\arabic{enumii}}
+\renewcommand{\labelenumiii}{5.\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}
+
+\begin{enumerate}[leftmargin=30pt, topsep=0pt, itemsep=0pt]
+    \item \textbf{Additional Reporting}: Were the following reported?
+    %\item[$\blacksquare$] \textcolor{gray}{Note: this is not a a standalone item but a subsection of additional information that we believe would be useful to be reported, in addition to the checklist items above.}
+    \begin{enumerate}
+        \item \textbf{Reporting Sample Demographics}: Demographics for human baseliners, e.g., race, gender, etc. Respond yes only if within-sample demographics are reported; e.g., respond no if the paper only reports that 100\% of the sample is based in the U.S.
+        \newline \textit{Select one of: ``Yes'', ``Partial'', \ul{``No'' (Default)}, ``Unknown/Unreported'', or ``N/A''}
+        
+        \item \textbf{Reporting Baseline Instructions}: Instructions/guidelines given to human baseliners
+        \newline \textit{Select one of: ``Yes'', ``Partial'', \ul{``No'' (Default)}, ``Unknown/Unreported'', or ``N/A''}
+        
+        \item \textbf{Reporting Time to Completion}: Time to completion for the eval items
+        \newline \textit{Select one of: ``Yes'', ``Partial'', \ul{``No'' (Default)}, ``Unknown/Unreported'', or ``N/A''}
+        
+        \item \textbf{AI Tool Versions}: AI tools and versions (if baseliners had AI access)
+        \newline \textit{Select one of: ``Yes'', ``Partial'', \ul{``No'' (Default)}, ``Unknown/Unreported'', or ``N/A''}
+
+        \item \textbf{Completion Rate}: How many human baseliners were recruited but did not complete the tasks?
+        \newline \textit{Select one of: ``Yes'', ``Partial'', \ul{``No'' (Default)}, ``Unknown/Unreported'', or ``N/A''}
+    \end{enumerate}
+    
+    \item \textbf{Baseline Data Availability}: Is the (anonymized) human baseline data publicly available?
+    \newline \textit{Select one of: ``Yes'', ``Partial'', \ul{``No'' (Default)}, ``Unknown/Unreported'', or ``N/A''}
+    \begin{enumerate}
+        \item \textbf{Individual Baseline Data Availability}: If yes: is data available at the individual baseliner level? I.e., can you tell from the dataset which baseliners were responsible for which questions?
+        \newline \textit{Select one of: ``Yes'', ``Partial'', \ul{``No'' (Default)}, ``Unknown/Unreported'', or ``N/A''}
+        
+        \item \textbf{Baseline Data Non-Availability Justification}: If no: is there a reasonable justification for non-disclosure of the baseline dataset? E.g., privacy concerns, safety/security concerns, company policy, etc.
+    \end{enumerate}
+    \item \textbf{Experimental Materials Availability}: Are experimental materials used to implement the eval/baseline publicly available?
+    \newline \textit{Select one of: ``Yes'', ``Partial'', \ul{``No'' (Default)}, ``Unknown/Unreported'', or ``N/A''}
+    
+    \item \textbf{Analysis Code Availability}: Is the code used to analyze the eval/baseline publicly available?
+    \newline \textit{Select one of: ``Yes'', ``Partial'', \ul{``No'' (Default)}, ``Unknown/Unreported'', or ``N/A''}
+\end{enumerate}
+
+\end{document}
